@@ -296,14 +296,14 @@ int student::studentView()
 
     int res = checkStudentCredentials(username, password);
 
-    if (res == 0)
-    {
-        cout << "\n Invalid Credentials !!";
-        cout << "\n Press any key for Main Menu..";
-        getchar();
-        getchar();
-        return 0;
-    }
+    // if (res)
+    // {
+    //     cout << "\n Invalid Credentials !!";
+    //     cout << "\n Press any key for Main Menu..";
+    //     getchar();
+    //     getchar();
+    //     return 0;
+    // }
 
     int goBack = 0;
     while (1)

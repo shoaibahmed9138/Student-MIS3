@@ -352,7 +352,7 @@ void mess::getBill()
         {
             cout << "Enter Month:-               ";
             cin >> month;
-            cout << "Enter Diets:-               ";
+            cout << "Enter Meals:-               ";
             cin >> diets;
             cout << "Enter Extras:-              ";
             cin >> extra;
@@ -393,7 +393,7 @@ void mess::showBill()
 void mess::displayBill()
 {
     cout << "\n\n\t\t\t======" << month << "======\n\n";
-    cout << "Diets:          " << diets << endl;
+    cout << "Meals:          " << diets << endl;
     cout << "Extras:         " << extra << endl;
     cout << "Bill:           " << bill << endl;
 }
