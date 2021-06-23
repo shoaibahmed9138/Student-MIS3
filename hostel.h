@@ -644,7 +644,7 @@ int menu()
         menu();
     }
 }
-int main()
+int Hostell()
 {
     system("color 71");
     menu();
