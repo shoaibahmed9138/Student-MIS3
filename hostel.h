@@ -7,7 +7,65 @@
 #include <process.h>
 
 using namespace std;
+class Student
+{
+    char sname[20], fatname[20], motname[20], dept[30], droll[12], year[30], peradd[40], gdname[20], gdadd[40];
+    char snum[15], fatnum[15], motnum[15], gdnum[15], dob[15], gender[10];
+    int Distance, room_no, floor;
+    char hostel_no[4], block, hroll[4];
 
+public:
+    void getInfo();
+};
+void Student::getInfo()
+{
+    cout << setw(70);
+    cout << "\n\n\t\t\t Welcome to Student Information Module" << endl;
+    cout << "\n";
+
+    cin.ignore();
+    cout << " Student's Name:-"
+         << "\t\t";
+    cin.getline(sname, 20);
+    cout << " Father's Name:-"
+         << "\t\t";
+    cin.getline(fatname, 20);
+    cout << " Mother's Name:-"
+         << "\t\t";
+    cin.getline(motname, 20);
+    cout << " Date of Birth(dd/mm/yy):-"
+         << "\t\t";
+    cin.getline(dob, 15);
+    cout << " Gender:-"
+         << "\t\t";
+    cin.getline(gender, 10);
+    cout << " Name Of The Department:-\t\t";
+    cin.getline(dept, 30);
+    cout << " Department Roll No.:-\t\t";
+    cin.getline(droll, 12);
+    cout << " Enter the year:-"
+         << "\t\t";
+    cin.getline(year, 30);
+    cout << " Permanent Address:-"
+         << "\t\t";
+    cin.getline(peradd, 20);
+    cout << " Name of Local Guardian:-\t";
+    cin.getline(gdname, 20);
+    cout << " Address Of Local Guardian:-\t";
+    cin.getline(gdadd, 30);
+    cout << " Student's Mobile Number:-\t";
+    cin.getline(snum, 12);
+    cout << " Father's Mobile Number:-\t";
+    cin.getline(fatnum, 12);
+    cout << " Mother's Mobile Number:-\t";
+    cin.getline(motnum, 12);
+    cout << " Guardian's Mobile Number:-\t";
+    cin.getline(gdnum, 12);
+    cout << "Distance of University from Your Permanent Address(in Kilometres):-\t";
+    cin >> Distance;
+
+    system("pause");
+}
 class hostel
 {
     char sname[20], fatname[20], motname[20], dept[30], droll[12], year[30], peradd[40], gdname[20], gdadd[40];
@@ -586,7 +644,7 @@ int menu()
         menu();
     }
 }
-int Hostell()
+int main()
 {
     system("color 71");
     menu();
