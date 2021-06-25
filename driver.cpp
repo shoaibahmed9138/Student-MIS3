@@ -18,12 +18,14 @@ int main()
     cout << "---------------------------------------------------------------------------------\n";
     cout << "----------------------------------STUDENT MIS 3----------------------------------\n";
     cout << "--------------------- ------------------------------------------------------------\n";
-    cout << "Functionalities of the MIS:\n";
-    cout << "1. Hostel Management System\n";
-    cout << "2. Attendance Management System\n";
-    cout << "3. Canteen Management System\n";
+    cout << "\n\n\n\n\n";
+    cout << "Functionalities of the MIS:\n\n\n";
+    cout << "1. Hostel Management System\n\n";
+    cout << "2. Attendance Management System\n\n";
+    cout << "3. Canteen Management System\n\n";
     int flag = 1;
     cout << "Enter the key corresponding to the system you want to use: \n";
+    
     while (flag)
     {
         cin >> a;
