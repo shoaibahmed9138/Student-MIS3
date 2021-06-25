@@ -410,7 +410,7 @@ int student::countMyAttendance(string username)
 
 int Attendance()
 {
-    system("color 71");
+    system("color 70");
     admin ADMIN;
     student STUDENT;
     while (1)

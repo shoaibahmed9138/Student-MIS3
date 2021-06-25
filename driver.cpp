@@ -14,7 +14,7 @@ using namespace std;
 int main()
 {
     int a;
-    system("color 71");
+    system("color 70");
     cout << "---------------------------------------------------------------------------------\n";
     cout << "----------------------------------STUDENT MIS 3----------------------------------\n";
     cout << "--------------------- ------------------------------------------------------------\n";
@@ -25,7 +25,7 @@ int main()
     cout << "3. Canteen Management System\n\n";
     int flag = 1;
     cout << "Enter the key corresponding to the system you want to use: \n";
-    
+
     while (flag)
     {
         cin >> a;

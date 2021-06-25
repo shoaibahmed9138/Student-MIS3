@@ -346,7 +346,7 @@ public:
         cout << "     BILL : PAY FOLLOWING AMOUNT " << endl;
         cout << "     CUSTOMER NAME : " << name << endl;
         cout << "     TOTAL COST IS : "
-             << "$" << totalcost << endl;
+             << "Rs." << totalcost << endl;
         ;
         cout << "     THANK YOU!" << endl;
         fstream billmod("SALESRECORD.txt", ios::app);
@@ -373,7 +373,7 @@ void billing::viewstat()
     while (viewsr >> name >> amt)
     {
         cout << "     " << name << " - "
-             << "$" << amt << endl;
+             << "Rs." << amt << endl;
     }
     viewsr.close();
     cout << endl
@@ -1066,7 +1066,7 @@ void empjump()
 int Canteen()
 {
     system("title CANTEEN MANAGEMENT SYSYTEM");
-    system("color 71");
+    system("color 70");
     login l;
     l.homepage();
     return 0;
