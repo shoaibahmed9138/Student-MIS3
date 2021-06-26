@@ -7,3 +7,5 @@
 ->Attendance Management System
 
 ->Canteen Management System
+
+This software was developed using the Object Oriented Software Design Principles.
