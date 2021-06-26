@@ -1066,7 +1066,7 @@ void empjump()
 int Canteen()
 {
     system("title CANTEEN MANAGEMENT SYSYTEM");
-    system("color 70");
+    system("color 3F");
     login l;
     l.homepage();
     return 0;

@@ -1,8 +1,8 @@
 #include <iostream>
-#include <string>  //string class , c_str()
-#include <fstream> //file handling operations
-#include <cstring> //strlen,strcpy
-#include <stdio.h> //remove,rename
+#include <string>
+#include <fstream>
+#include <cstring>
+#include <stdio.h>
 
 using namespace std;
 class admin
@@ -27,14 +27,14 @@ int checkStudentCredentials(string, string);
 
 int admin::adminLogin()
 {
-    cout << "\n --------- Admin Login --------";
+    cout << "\n\t --------- Admin Login --------";
 
     string username;
     string password;
 
-    cout << "\n Enter username : ";
+    cout << "\n\t Enter username : ";
     cin >> username;
-    cout << "\n Enter password : ";
+    cout << "\n\t Enter password : ";
     cin >> password;
 
     if (username == "studentmis3" && password == "studentmis3")
@@ -58,11 +58,11 @@ int admin::adminView()
     int goBack = 0;
     while (1)
     {
-        cout << "\n 1. Register a Student";
-        cout << "\n 2. Delete a student record";
-        cout << "\n 3. Check List of Students registered by username";
-        cout << "\n 4. Check presence count of student";
-        cout << "\n 0. Go Back <- \n";
+        cout << "\n\t 1. Register a Student";
+        cout << "\n\t 2. Delete a student record";
+        cout << "\n\t 3. Check List of Students registered by username";
+        cout << "\n\t 4. Check presence count of student";
+        cout << "\n\t 0. Go Back <- \n";
         int choice;
 
         cout << "\n Enter your choice: ";
@@ -97,28 +97,28 @@ int admin::adminView()
 
 int admin::registerStudent()
 {
-    cout << "\n ----- Form to Register Student ---- \n";
+    cout << "\n\t ----- Form to Register Student ---- \n";
 
     string name, username, rollno, father, mother;
     char password[100];
 
-    cout << "\n Enter Name : ";
+    cout << "\n\tEnter Name : ";
     cin >> name;
-    cout << "\n Enter Username : ";
+    cout << "\n\tEnter Username : ";
     cin >> username;
     cin.ignore();
-    cout << "\n Enter password : ";
+    cout << "\n\tEnter password : ";
     cin.getline(password, 100);
-    cout << "\n Enter rollno : ";
+    cout << "\n\t Enter rollno : ";
     cin >> rollno;
     getchar();
 
     char add[100];
-    cout << "\n Enter address : ";
+    cout << "\n\tEnter address : ";
     cin.getline(add, 100);
-    cout << "\n Enter father's name : ";
+    cout << "\n\tEnter father's name : ";
     cin >> father;
-    cout << "\n Enter mother's name : ";
+    cout << "\n\tEnter mother's name : ";
     cin >> mother;
 
     //check if record already exists..
@@ -139,7 +139,7 @@ int admin::registerStudent()
         }
         if (recordFound == 1)
         {
-            cout << "\n Username already Register. Please choose another username ";
+            cout << "\n\tUsername already Register. Please choose another username ";
             getchar();
             getchar();
             read.close();
@@ -165,9 +165,9 @@ int admin::registerStudent()
     out1 << mother << "\n";
     out1.close();
 
-    cout << "\n Student Registered Successfully !!";
+    cout << "\n\tStudent Registered Successfully !!";
 
-    cout << "\n Press any key to continue..";
+    cout << "\n\tPress any key to continue..";
     getchar();
     getchar();
     return 0;
@@ -176,7 +176,7 @@ int admin::registerStudent()
 int admin::deleteStudent()
 {
     string username;
-    cout << "\n Enter username of the student ";
+    cout << "\n\tEnter username of the student ";
     cin >> username;
 
     ifstream read;
@@ -184,7 +184,7 @@ int admin::deleteStudent()
     read.open(temp.c_str());
     if (read)
     {
-        cout << "\n Student record has been deleted!";
+        cout << "\n\tStudent record has been deleted!";
         read.close();
         remove(temp.c_str());
     }
@@ -221,7 +221,7 @@ int admin::deleteStudent()
 
 int admin::checkListOfStudentsRegistered()
 {
-    cout << "\n - Check List of Student Registered by Username-- ";
+    cout << "\n\t - Check List of Student Registered by Username-- ";
 
     //check if record already exist..
     ifstream read;
@@ -234,15 +234,15 @@ int admin::checkListOfStudentsRegistered()
         {
             char name[100];
             strcpy(name, line.c_str());
-            cout << " \n " << name;
+            cout << " \n\t" << name;
         }
         read.close();
     }
     else
     {
-        cout << "\n No Record found :(";
+        cout << "\n\tNo Record found :(";
     }
-    cout << "\n Press any key to continue..";
+    cout << "\n\tPress any key to continue..";
     getchar();
     getchar();
     return 0;
@@ -251,7 +251,7 @@ int admin::checkListOfStudentsRegistered()
 int admin::checkPresenseCountOfStudent()
 {
     string username;
-    cout << "\n Enter username to check Presense count ";
+    cout << "\n\tEnter username to check Presense count ";
     cin >> username;
 
     ifstream fin;
@@ -266,8 +266,8 @@ int admin::checkPresenseCountOfStudent()
             if (line == "P")
                 presenceCount++;
         }
-        cout << "\n Presence count is " << presenceCount << endl;
-        cout << "\n press any key to continue..";
+        cout << "\n\tPresence count is " << presenceCount << endl;
+        cout << "\n\tpress any key to continue..";
         getchar();
         getchar();
         return 0;
@@ -284,14 +284,14 @@ int student::studentLogin()
 
 int student::studentView()
 {
-    cout << "\n ------- Student Login-------- \n";
+    cout << "\n\t ------- Student Login-------- \n";
 
     string username, password;
 
-    cout << "\n Enter username : ";
+    cout << "\n\tEnter username : ";
     cin >> username;
     cin.ignore();
-    cout << "\n Enter password : ";
+    cout << "\n\tEnter password : ";
     getline(cin, password);
 
     int res = checkStudentCredentials(username, password);
@@ -309,12 +309,12 @@ int student::studentView()
     while (1)
     {
 
-        cout << "\n 1. Mark Attendance for Today ";
-        cout << "\n 2. Count my Attendance";
-        cout << "\n 0. Go Back <- \n";
+        cout << "\n\t1. Mark Attendance for Today ";
+        cout << "\n\t2. Count my Attendance";
+        cout << "\n\t0. Go Back <- \n";
         int choice;
 
-        cout << "\n Enter your choice: ";
+        cout << "\n\tEnter your choice: ";
         cin >> choice;
 
         switch (choice)
@@ -329,7 +329,7 @@ int student::studentView()
             goBack = 1;
             break;
         default:
-            cout << "\n Invalid choice. Enter again ";
+            cout << "\n\tInvalid choice. Enter again ";
             getchar();
         }
         if (goBack == 1)
@@ -377,8 +377,8 @@ int student::markMyAttendance(string username)
     fout.open(temp.c_str(), ios::app);
     fout << "P\n";
 
-    cout << "\n Your Attendance has been marked for today !!\n";
-    cout << "\n Press any key to continue..";
+    cout << "\n\tYour Attendance has been marked for today !!\n";
+    cout << "\n\tPress any key to continue..";
     getchar();
     getchar();
     return 0;
@@ -398,8 +398,8 @@ int student::countMyAttendance(string username)
             if (line == "P")
                 presenceCount++;
         }
-        cout << "\n Your attendace count is " << presenceCount << endl;
-        cout << "\n Press any key to continue..";
+        cout << "\n\tYour attendace count is " << presenceCount << endl;
+        cout << "\n\tPress any key to continue..";
         getchar();
         getchar();
         return 0;
@@ -410,21 +410,36 @@ int student::countMyAttendance(string username)
 
 int Attendance()
 {
-    system("color 70");
+    system("color 3F");
     admin ADMIN;
     student STUDENT;
     while (1)
     {
-        cout << "\n Attendance Management System \n";
-        cout << "-------------------------------------\n\n";
+        cout << "\t" << char(201);
+        for (int i = 0; i < 47; i++)
+        {
+            cout << char(205);
+        }
+        cout << char(187) << endl;
+        cout << "\t" << char(186) << "                                               " << char(186) << endl;
+        cout << "\t" << char(186) << "                                               " << char(186) << endl;
+        cout << "\t" << char(186) << "       SJCE Attendance Management System       " << char(186) << endl;
+        cout << "\t" << char(186) << "                                               " << char(186) << endl;
+        cout << "\t" << char(186) << "                                               " << char(186) << endl;
+        cout << "\t" << char(200);
+        for (int i = 0; i < 47; i++)
+        {
+            cout << char(205);
+        }
+        cout << char(188) << endl;
+        cout << "\n\n\n";
+        cout << "\t1. Admin Login\n";
+        cout << "\t2. Student Login\n";
 
-        cout << "1. Admin Login\n";
-        cout << "2. Student Login\n";
-
-        cout << "0. Exit\n";
+        cout << "\t0. Exit\n";
         int choice;
 
-        cout << "\n Enter your choice: ";
+        cout << "\t\n Enter your choice: ";
         cin >> choice;
 
         switch (choice)

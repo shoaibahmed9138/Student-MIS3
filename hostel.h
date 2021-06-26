@@ -140,7 +140,7 @@ void Admin::displayInfo1()
     cout << " Date Of Birth:-             " << s.dob << endl;
     cout << " Gender:-                    " << s.gender << endl;
     cout << " Name Of The Department:-    " << s.dept << endl;
-    cout << " Department Roll No.         " << s.droll << endl;
+    cout << " Department ID:-             " << s.droll << endl;
     cout << " Enter the year:-            " << s.year << endl;
     cout << " Permanent Address:-         " << s.peradd << endl;
     cout << " Name of Local Guardian:-    " << s.gdname << endl;
@@ -161,7 +161,7 @@ void Admin::displayInfo()
     cout << " Date Of Birth:-             " << s.dob << endl;
     cout << " Gender:-                    " << s.gender << endl;
     cout << " Name Of The Department:-    " << s.dept << endl;
-    cout << " Department Roll No.         " << s.droll << endl;
+    cout << " Department ID:         " << s.droll << endl;
     cout << " Enter the year:-            " << s.year << endl;
     cout << " Permanent Address:-         " << s.peradd << endl;
     cout << " Name of Local Guardian:-    " << s.gdname << endl;
@@ -602,7 +602,7 @@ int menu()
 }
 int Hostell()
 {
-    system("color 70");
+    system("color 3F");
     menu();
     getch();
     return 0;
